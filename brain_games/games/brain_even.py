@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Игра Чет-нечет
 import prompt
 from random import randint
 
