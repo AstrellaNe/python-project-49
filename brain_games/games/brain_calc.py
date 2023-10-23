@@ -62,8 +62,6 @@ def game_cycle_calc():
         else:
             print(f"'{user_answer}' is the wrong answer ;(. The correct answer was '{correct_answer}'.")
     
-    if exceed_non_digit:
-        print('You have entered non-digit characters multiple times. Exiting game.')
     return answers_count
 
 
