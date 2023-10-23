@@ -46,10 +46,7 @@ def game_cycle_calc():
                 non_digit_count += 1
                 if non_digit_count == 3:
                     break
-        
-        if non_digit_count == 3:
-            break
-        
+                
         if user_answer == correct_answer:
             print('Correct!')
             answers_count += 1
