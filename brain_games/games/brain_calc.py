@@ -67,7 +67,7 @@ def game_cycle_calc():
 
 
 def main(): # вызываем только сами функции и проверяем результат
-    print('Welcome to the Brain Games!')
+    print('Welcome to the Brain Games Calculator!')
     name = welcome_user()
     print(f'Hello, {name}!\nWhat is the result of the expression?. Use only digits')
     game_result = game_cycle_calc()

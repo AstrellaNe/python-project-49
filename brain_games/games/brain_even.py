@@ -39,7 +39,7 @@ def game_cycle():
 
 
 def main(): # вызываем только сами функции и проверяем результат
-    print('Welcome to the Brain Games!')
+    print('Welcome to the Brain Games Even or Odd!')
     name = welcome_user()
     print(f'Hello, {name}!\nAnswer "yes" if the number is even, otherwise answer "no".')
     game_result = game_cycle()
