@@ -18,3 +18,8 @@ brain-games:
 
 lint:	
 	poetry run flake8 brain_games
+
+git-prepare:
+	make build
+	make package-reinstall
+	git add .
