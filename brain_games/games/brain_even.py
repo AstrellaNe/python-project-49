@@ -3,15 +3,6 @@
 import prompt
 from random import randint
 
-# Комменты для наставника и для себя
-# пока оставим отдельной функцией,не внутри main() вопреки YAGNI
-# эта функция не кажется избыточной, хотя можно встроить и в main()
-# лучше обеспечить читаемость кода, а не запихивать все в одну функцию
-def welcome_user():  
-    name = prompt.string('May I have your name? ')
-    return name
-
-
 # выносим функцию рандомного числа из main() для читаемости
 def random_number():
     number = randint(0, 100)
