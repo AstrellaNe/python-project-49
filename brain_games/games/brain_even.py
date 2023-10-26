@@ -20,8 +20,7 @@ def main(): # вызываем только сами функции
 Answer "yes" if the number is even, otherwise answer "no". 
 Use only letters, no breaks or symbols!''')
     question, correct_answer = random_number()
-    print(question)
-    return correct_answer
+    return question, correct_answer
 
 
 

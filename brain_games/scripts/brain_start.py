@@ -4,83 +4,70 @@
 import prompt
 import brain_games.games.brain_calc as brain_calc
 import brain_games.games.brain_even as brain_even
-import brain_games.games.brain_comdiv as brain_comdiv
+import brain_games.games.brain_gcd as brain_gcd
 
-games = { # словарь, чтобы можно было добавить в будущем много других игр
+# Словарь, чтобы можно было добавить в будущем много других игр
+games = {
     '1': brain_even.main,
     '2': brain_calc.main,
-    '3': brain_comdiv.main,
-    }
+    '3': brain_gcd.main,
+}
 
-def welcome_user(): # приветствие пользователя
+def welcome_user():
+    # Приветствие пользователя
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     return name
 
-
 def game_choice():
-    non_digit_choice = 0 # счетчик неверного ввода выбора игры
-    while non_digit_choice < 3:
-        choice = prompt.string('''Choose a game: 
+    # Счетчик неверного ввода выбора игры
+    non_digit_choice = 0
+    choice = prompt.string('''Choose a game: 
     Print "1" for "Even or Odd"
     Print "2" for "Calculator"
-    Print "3" for "Common Divisor": ''') # пробелы сознательно сделаны
-        if choice.isdigit():
-            game_function = games.get(choice)
-            if game_function:
-                correct_answer = game_function()
-                user_answer = input('Your answer: ')
-                return choice, correct_answer, user_answer, non_digit_choice
-            else:
-                print('Invalid choice. Please choose a valid game number.')
-        else:
-            print('Digits only!')
-            non_digit_choice += 1 
-    print('''You have exceeded the maximum number of invalid choices.
-Sorry, we are quiting the game. Try again next time, {name}!''')
-    return None, None, None, non_digit_choice
-
-
-
-def game_cycle(): #  один цикл игры
-    choice, correct_answer, user_answer, non_digit_choice = game_choice()
-    if choice == None:
-        return False # передаем в main переменную для обрыва игры после ошибок ввода
-    elif non_digit_choice == 3:
-        print(f'''Sorry,{name}, too many mistakes ;(.
+    Print "3" for "Common Divisor": ''')
+    if choice.isdigit():
+        chosen_game = games.get(choice)
+        return chosen_game
+    elif non_digit_choice ==3:
+        print(f'''Sorry, {name}, too many mistakes ;(.
 We end the game. Let's try again next time!''')
-        return False
-    elif correct_answer is not None and user_answer is not None:
+        return
+    else:
+        print('Digits only!')
+        non_digit_choice += 1
+        choice 
+    
+    return chosen_game, non_digit_choice
+
+def game_cycle(chosen_game, name):
+    # Один цикл игры   
+    answers_count = 0 # Счетчик правильных ответов
+    for turn in range(3):
+        question, correct_answer = chosen_game()
+        print(question)
+        user_answer = input('Your answer: ')
         if user_answer == str(correct_answer):
-                print('Correct!')
-                return True
+            print('Correct!')
+            answers_count += 1
         else:
             print(f'{user_answer} is the wrong answer ;(. The correct answer was {correct_answer}')
-            return False
-    else:
-        print(f'{user_answer} is the wrong answer ;(. The correct answer was {correct_answer}')
-        return False
-        
+            break
+    
+    return answers_count
+
 
 def main():
     print('Welcome to the Brain Games!')
     name = welcome_user()
-    answers_count = 0 # счетчик правильных ответов
     
-    
-    while answers_count < 4:
-   # 3 раунда на любую игру     
-        game_cycle
-        if game_cycle() == True:  
-            answers_count += 1       
+    chosen_game = game_choice()
+    if chosen_game:
+        answers_count = game_cycle(chosen_game, name)  # передаем параметры выбранной игры
+        if answers_count == 3:
+            print(f'Congratulations, {name}! You answered all questions correctly.')
         else:
-            return   
-
-    if answers_count == 3:
-        print(f'Congratulations, {name}!')
-    else:
-        print(f"Let's try again, {name}!")
-        return
+            print(f"Let's try again, {name}!")
 
 
 if __name__ == '__main__':

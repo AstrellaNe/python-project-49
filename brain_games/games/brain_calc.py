@@ -23,8 +23,7 @@ def main(): # вызываем только сами функции и пров�
     print('Welcome to the Brain Games Calculator!\nWhat is the result of the expression? Use only digits')
     operation = choice(['+', '-', '*'])
     question, correct_answer = random_number_calc(operation)
-    print(question)
-    return correct_answer
+    return question, correct_answer 
 
 
 if __name__ == '__main__':
