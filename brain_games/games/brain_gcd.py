@@ -25,8 +25,7 @@ def main(): # вызываем только сами функции и пров�
     correct_answer = division_result
     question = (f'Question: {number_one} {number_two}')
     print('Welcome to the Brain Games COMDIV!\nFind the greatest common divisor of given numbers. Use only digits')
-    print(question)
-    return correct_answer
+    return question, orrect_answer
 
 
 if __name__ == '__main__':
