@@ -10,34 +10,18 @@ def random_number():
            answer = 'yes'
     else:
             answer = 'no'
-    return number, answer
+    
+    question = f'Question: {number}'
+    return question, answer
 
 
-# вынесем игру в цикл по принципу одна функция - один функционал
-def game_cycle():
-    answers_count = 0
-    for turn in range(3): # был цикл, но поменял на for...in
-        number, correct_answer = random_number()
-        print(f'Question: {number}')
-        user_answer = prompt.string('Your answer: ')
-        if user_answer == correct_answer:
-            print('Correct!')
-            answers_count += 1
-        else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
-            break
-    return answers_count
-
-
-def main(): # вызываем только сами функции и проверяем результат
-    print('Welcome to the Brain Games Even or Odd!')
-    name = welcome_user()
-    print(f'Hello, {name}!\nAnswer "yes" if the number is even, otherwise answer "no".')
-    game_result = game_cycle()
-    if game_result == 3:
-        print(f'Congratulations, {name}!')
-    else:
-        print(f"Let's try again, {name}!") 
+def main(): # вызываем только сами функции 
+    print('''Welcome to the Brain Games Even or Odd!
+Answer "yes" if the number is even, otherwise answer "no". 
+Use only letters, no breaks or symbols!''')
+    question, correct_answer = random_number()
+    print(question)
+    return correct_answer
 
 
 
