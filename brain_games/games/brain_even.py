@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # Игра Чет-нечет
-import prompt
 from random import randint
 
 
@@ -11,17 +10,17 @@ def random_number():
            answer = 'yes'
     else:
             answer = 'no'
-    
+
     question = f'Question: {number}'
     return question, answer
 
 
-def main(): # вызываем только сами функции 
-    welcome_text = f''''Welcome to the Brain Games Even or Odd!
-Answer "yes" if the number is even, otherwise answer "no". 
+def main():  # вызываем только сами функции 
+    welcome_text = ''''Welcome to the Brain Games Even or Odd!
+Answer "yes" if the number is even, otherwise answer "no".
 Use only letters, no breaks or symbols!'''
     question, correct_answer = random_number()
-    
+
     return welcome_text, question, correct_answer 
 
 
