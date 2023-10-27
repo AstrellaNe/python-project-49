@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Игра Чет-нечет
 from random import randint
+import brain_games.scripts.brain_isolate as isolate  # для изолиров запуска
 
 
 # выносим функцию рандомного числа из main() для читаемости
@@ -25,4 +26,22 @@ Use only letters, no breaks or symbols!'''
 
 
 if __name__ == '__main__':
+    name = isolate.welcome_user()
     main()
+    answers_count = 0
+    for turn in range(3):
+        welcome_text, question, correct_answer = main()
+        if answers_count == 0:
+            print(welcome_text)
+        print(question)
+        user_answer = input('Your answer: ')
+        if user_answer == str(correct_answer):
+            answers_count += 1
+        else:
+            print(f'{user_answer} is the wrong answer ;(. The correct answer was {correct_answer}')
+            break
+    
+    if answers_count == 3:
+        print(f'Congratulations, {name}! You answered all questions correctly.')
+    else:
+        print('Sorry, you lost. Try again!')

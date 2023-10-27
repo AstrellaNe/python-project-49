@@ -19,26 +19,39 @@ def welcome_user():
     print(f'Hello, {name}!')
     return name
 
-def game_choice():
+def game_choice(name):
     # Счетчик неверного ввода выбора игры
     non_digit_choice = 0
-    choice = prompt.string('''Choose a game: 
-    Print "1" for "Even or Odd"
-    Print "2" for "Calculator"
-    Print "3" for "Common Divisor": ''')
-    if choice.isdigit():
-        chosen_game = games.get(choice)
-        return chosen_game
-    elif non_digit_choice ==3:
-        print(f'''Sorry, {name}, too many mistakes ;(.
-We end the game. Let's try again next time!''')
-        return
-    else:
-        print('Digits only!')
-        non_digit_choice += 1
-        choice 
+    chosen_game = None
     
-    return chosen_game, non_digit_choice
+    while chosen_game is None:
+        choice = prompt.string('''Choose a game: 
+        Print "1" for "Even or Odd"
+        Print "2" for "Calculator"
+        Print "3" for "Common Divisor": ''')
+        
+        if choice.isdigit():
+            if choice in games:
+                chosen_game = games.get(choice)
+            else:
+                print(f'Invalid choice! Please enter a number corresponding to the available games.')
+                non_digit_choice += 1
+                if non_digit_choice == 3:
+                    print(f'''Sorry, {name}, too many mistakes ;(.
+We end the game. Let's try again next time!''')
+                    return
+        else:
+            print('Digits only!')
+            non_digit_choice += 1
+            if non_digit_choice == 3:
+                print(f'''Sorry, {name}, too many mistakes ;(.
+We end the game. Let's try again next time!''')
+                return
+    
+    return chosen_game
+
+
+
 
 def game_cycle(chosen_game, name):
     # Один цикл игры   
@@ -64,9 +77,9 @@ def game_cycle(chosen_game, name):
 def main():
     print('Welcome to the Brain Games!')
     name = welcome_user()
-    chosen_game = game_choice()
-    if chosen_game:
-        answers_count = game_cycle(chosen_game, name)  # передаем параметры выбранной игры
+    game = game_choice(name)
+    if game:
+        answers_count = game_cycle(game, name)  # передаем параметры выбранной игры
         if answers_count == 3:
             print(f'Congratulations, {name}! You answered all questions correctly.')
         else:
