@@ -20,10 +20,11 @@ def random_number_calc(operation):
 
 
 def main(): # вызываем только сами функции и проверяем результат
-    print('Welcome to the Brain Games Calculator!\nWhat is the result of the expression? Use only digits')
+    welcome_text = f'Welcome to the Brain Games Calculator!\nWhat is the result of the expression? Use only digits'
     operation = choice(['+', '-', '*'])
     question, correct_answer = random_number_calc(operation)
-    return question, correct_answer 
+    
+    return welcome_text, question, correct_answer 
 
 
 if __name__ == '__main__':

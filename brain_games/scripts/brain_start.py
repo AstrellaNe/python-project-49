@@ -43,12 +43,14 @@ We end the game. Let's try again next time!''')
 def game_cycle(chosen_game, name):
     # Один цикл игры   
     answers_count = 0 # Счетчик правильных ответов
+    
     for turn in range(3):
-        question, correct_answer = chosen_game()
+        welcome_text, question, correct_answer = chosen_game()
+        if answers_count == 0:
+            print(welcome_text)
         print(question)
         user_answer = input('Your answer: ')
         if user_answer == str(correct_answer):
-            print('Correct!')
             answers_count += 1
         else:
             print(f'{user_answer} is the wrong answer ;(. The correct answer was {correct_answer}')
@@ -57,10 +59,11 @@ def game_cycle(chosen_game, name):
     return answers_count
 
 
+
+
 def main():
     print('Welcome to the Brain Games!')
     name = welcome_user()
-    
     chosen_game = game_choice()
     if chosen_game:
         answers_count = game_cycle(chosen_game, name)  # передаем параметры выбранной игры

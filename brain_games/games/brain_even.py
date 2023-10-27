@@ -3,6 +3,7 @@
 import prompt
 from random import randint
 
+
 # выносим функцию рандомного числа из main() для читаемости
 def random_number():
     number = randint(0, 100)
@@ -16,12 +17,12 @@ def random_number():
 
 
 def main(): # вызываем только сами функции 
-    print('''Welcome to the Brain Games Even or Odd!
+    welcome_text = f''''Welcome to the Brain Games Even or Odd!
 Answer "yes" if the number is even, otherwise answer "no". 
-Use only letters, no breaks or symbols!''')
+Use only letters, no breaks or symbols!'''
     question, correct_answer = random_number()
-    return question, correct_answer
-
+    
+    return welcome_text, question, correct_answer 
 
 
 if __name__ == '__main__':
