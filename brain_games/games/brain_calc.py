@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # игра Калькулятор
 from random import randint, choice  # модуль для выбора операции =,-или*
-import brain_games.scripts.brain_isolate as isolate  # для изолиров запуска
+
 
 # функция 2 рандомных чисел и верный ответ в зависимости от операции
 def random_number_calc(operation):
@@ -24,25 +24,3 @@ What is the result of the expression? Use only digits'''
     question, correct_answer = random_number_calc(operation)
 
     return welcome_text, question, correct_answer
-
-
-if __name__ == '__main__':
-    name = isolate.welcome_user()
-    main()
-    answers_count = 0
-    for turn in range(3):
-        welcome_text, question, correct_answer = main()
-        if answers_count == 0:
-            print(welcome_text)
-        print(question)
-        user_answer = input('Your answer: ')
-        if user_answer == str(correct_answer):
-            answers_count += 1
-        else:
-            print(f'{user_answer} is the wrong answer ;(. The correct answer was {correct_answer}')
-            break
-    
-    if answers_count == 3:
-        print(f'Congratulations, {name}! You answered all questions correctly.')
-    else:
-        print('Sorry, you lost. Try again!')
