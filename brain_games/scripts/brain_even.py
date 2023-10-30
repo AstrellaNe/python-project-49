@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# модуль изолированного запуска калькулятора
+# модуль изолированного запуска чет-нечет
 import brain_games.brain_isolate as brain_isolate  #обработчик цикла игры
 from brain_games.games.brain_even import main as even
 

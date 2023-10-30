@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# модуль изолированного запуска игр
 import prompt
 
 name = ''
@@ -18,6 +19,7 @@ def game_cycle(game):
         print(question)
         user_answer = input('Your answer: ')
         if user_answer == str(correct_answer):
+            print('Correct!')
             answers_count += 1
         else:
             print(f'{user_answer} is the wrong answer ;(. The correct answer was {correct_answer}')

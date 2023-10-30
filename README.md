@@ -9,8 +9,11 @@
 **Presentation of Brain Calculator gameplay**
 [![asciicast](https://asciinema.org/a/hrZ59uKwTc9dUUhLWj7KHWHhQ.svg)](https://asciinema.org/a/hrZ59uKwTc9dUUhLWj7KHWHhQ)
 
-**Presentation of Brain GCD Module operation**
+**Presentation of Brain GCD Module gameplay**
 [![asciicast](https://asciinema.org/a/pDiJAPqz7GD8lodbcdiWKDFCM.svg)](https://asciinema.org/a/pDiJAPqz7GD8lodbcdiWKDFCM)
+
+**Presentation of Brain Progression Module gameplay**
+[![asciicast](https://asciinema.org/a/COxgFbgiwHMKyYGaWuq16f0JA.svg)](https://asciinema.org/a/COxgFbgiwHMKyYGaWuq16f0JA)
 
 **Presentation of Brain Main Module operation**
 [![asciicast](https://asciinema.org/a/vEWonqndJBFODsPgEQn7WF1Ct.svg)](https://asciinema.org/a/vEWonqndJBFODsPgEQn7WF1Ct)

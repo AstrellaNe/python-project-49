@@ -5,12 +5,14 @@ import prompt
 import brain_games.games.brain_calc as brain_calc
 import brain_games.games.brain_even as brain_even
 import brain_games.games.brain_gcd as brain_gcd
+import brain_games.games.brain_progression as brain_prog
 
 # Словарь, чтобы можно было добавить в будущем много других игр
 games = {
     '1': brain_even.main,
     '2': brain_calc.main,
     '3': brain_gcd.main,
+    '4': brain_prog.main,
 }
 
 def welcome_user():
@@ -28,7 +30,8 @@ def game_choice(name):
         choice = prompt.string('''Choose a game: 
         Print "1" for "Even or Odd"
         Print "2" for "Calculator"
-        Print "3" for "Common Divisor": ''')
+        Print "3" for "Common Divisor"
+        Print "4" for "Progression": ''')
         
         if choice.isdigit():
             if choice in games:
