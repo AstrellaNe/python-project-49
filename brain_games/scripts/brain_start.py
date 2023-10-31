@@ -6,6 +6,7 @@ import brain_games.games.brain_calc as brain_calc
 import brain_games.games.brain_even as brain_even
 import brain_games.games.brain_gcd as brain_gcd
 import brain_games.games.brain_progression as brain_prog
+import brain_games.games.brain_prime as brain_prime
 
 # Словарь, чтобы можно было добавить в будущем много других игр
 games = {
@@ -13,6 +14,7 @@ games = {
     '2': brain_calc.main,
     '3': brain_gcd.main,
     '4': brain_prog.main,
+    '5': brain_prime.main,
 }
 
 def welcome_user():
@@ -31,7 +33,8 @@ def game_choice(name):
         Print "1" for "Even or Odd"
         Print "2" for "Calculator"
         Print "3" for "Common Divisor"
-        Print "4" for "Progression": ''')
+        Print "4" for "Progression"
+        Print "5" for "Prime Number":''')
         
         if choice.isdigit():
             if choice in games:

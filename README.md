@@ -15,5 +15,8 @@
 **Presentation of Brain Progression Module gameplay**
 [![asciicast](https://asciinema.org/a/COxgFbgiwHMKyYGaWuq16f0JA.svg)](https://asciinema.org/a/COxgFbgiwHMKyYGaWuq16f0JA)
 
+**Presentation of Brain Prime Number Module gameplay**
+[![asciicast](https://asciinema.org/a/gybjMHYq1m9zEsXveAfKBCMHV.svg)](https://asciinema.org/a/gybjMHYq1m9zEsXveAfKBCMHV)
+
 **Presentation of Brain Main Module operation**
 [![asciicast](https://asciinema.org/a/vEWonqndJBFODsPgEQn7WF1Ct.svg)](https://asciinema.org/a/vEWonqndJBFODsPgEQn7WF1Ct)
