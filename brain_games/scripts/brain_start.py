@@ -70,7 +70,7 @@ def game_cycle(chosen_game, name):
 def main():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}')
+    print(f'Hello, {name}!')
     chosen_game = game_choice(name)
     game_function = games[chosen_game]  # Получаю функцию
     isolate.game_cycle(game_function, name)  # Передаю функцию
