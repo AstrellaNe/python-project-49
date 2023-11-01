@@ -5,7 +5,8 @@ from brain_games.games.brain_even import main as even
 
 
 def main():
-    brain_isolate.game_cycle(even)
+    name = brain_isolate.welcome_user()
+    brain_isolate.game_cycle(even, name)
 
 
 if __name__ == '__main__':

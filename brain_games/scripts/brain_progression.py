@@ -5,7 +5,8 @@ from brain_games.games.brain_progression import main as prog
 
 
 def main():
-    brain_isolate.game_cycle(prog)
+    name = brain_isolate.welcome_user()
+    brain_isolate.game_cycle(prog, name)
 
 
 if __name__ == '__main__':

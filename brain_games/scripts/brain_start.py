@@ -7,6 +7,7 @@ import brain_games.games.brain_even as brain_even
 import brain_games.games.brain_gcd as brain_gcd
 import brain_games.games.brain_progression as brain_prog
 import brain_games.games.brain_prime as brain_prime
+import brain_games.scripts.brain_isolate as isolate
 
 # Словарь, чтобы можно было добавить в будущем много других игр
 games = {
@@ -70,14 +71,10 @@ def main():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    game = game_choice(name)
-    if game:
-        answers_count = game_cycle(game, name)
-        if answers_count == 3:
-            print(f'Congratulations, {name}!'
-                  f' You answered all questions correctly.')
-        else:
-            print(f"Let's try again, {name}!")
+    chosen_game = game_choice(name)
+    if game_choice:
+        game_function = games[chosen_game]  # Получаю функцию
+        isolate.game_cycle(game_function, name)  # Передаю функцию
 
 
 if __name__ == '__main__':

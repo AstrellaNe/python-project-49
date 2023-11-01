@@ -3,9 +3,13 @@
 import prompt
 
 
-def game_cycle(game):
+def welcome_user():
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
+    return name
+
+
+def game_cycle(game, name):
     answers_count = 0
     while answers_count < 3:
         welcome_text, question, correct_answer = game()

@@ -5,7 +5,8 @@ from brain_games.games.brain_gcd import main as gcd
 
 
 def main():
-    brain_isolate.game_cycle(gcd)
+    name = brain_isolate.welcome_user()
+    brain_isolate.game_cycle(gcd, name)
 
 
 if __name__ == '__main__':
