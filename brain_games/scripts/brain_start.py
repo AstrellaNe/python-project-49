@@ -42,7 +42,7 @@ def game_choice(name):
                 return chosen_game
 
     print(f'''Sorry, {name}, too many mistakes ;(.
-                          We end the game. Let's try again next time!''')
+  We end the game. Let's try again next time!''')
     return None
 
 
@@ -72,9 +72,8 @@ def main():
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     chosen_game = game_choice(name)
-    if game_choice:
-        game_function = games[chosen_game]  # Получаю функцию
-        isolate.game_cycle(game_function, name)  # Передаю функцию
+    game_function = games[chosen_game]  # Получаю функцию
+    isolate.game_cycle(game_function, name)  # Передаю функцию
 
 
 if __name__ == '__main__':
