@@ -28,7 +28,7 @@ def game_choice(name):
         Print "2" for "Calculator"
         Print "3" for "Common Divisor"
         Print "4" for "Progression"
-        Print "5" for "Prime Number":''')
+        Print "5" for "Prime Number": ''')
 
     if chosen_game.isdigit() and chosen_game in games:
         return chosen_game
