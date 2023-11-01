@@ -27,7 +27,7 @@ def game_choice(name):
                          '5': "Prime Number"}
 
     for attempt in range(1, max_attempts + 1):
-        choice = prompt.string(f'''Choose a game:
+        choice = prompt.string('''Choose a game:
             Print "1" for "Even or Odd"
             Print "2" for "Calculator"
             Print "3" for "Common Divisor"
@@ -39,7 +39,7 @@ def game_choice(name):
             return chosen_game
 
         print(f'Invalid choice, {name}!'
-                      f'Please enter a number of the available games.')
+              f'Please enter a number of the available games.')
 
         if attempt == max_attempts:
             print(f'''Sorry, {name}, too many mistakes ;(.
@@ -66,7 +66,8 @@ def game_cycle(chosen_game):
             print('Correct!')
             answers_count += 1
         else:
-            print(f"'{user_answer}' is the wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"'{user_answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.")
             break
 
     return answers_count
@@ -76,16 +77,17 @@ def main():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-
     chosen_game = game_choice(name)
-    
+
     if chosen_game:
         answers_count = game_cycle(chosen_game)
-        
+
         if answers_count == 3:
-            print(f'Congratulations, {name}! You answered all questions correctly.')
+            print(f'Congratulations, {name}!'
+                  f' You answered all questions correctly.')
         else:
             print(f"Let's try again, {name}!")
+
 
 if __name__ == '__main__':
     main()
