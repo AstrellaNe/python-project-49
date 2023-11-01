@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # игра НОД
-from random import randint 
+from random import randint
 from math import gcd
 
 
@@ -12,17 +12,16 @@ def random_number_calc():
     return number_one, number_two, divisor
 
 
-
-#def comdiv():   нашел в модуле math готовое решение,
+# def comdiv():   нашел в модуле math готовое решение,
 # это оставлю как память о собственных вычислениях до проверки
-    #number_one, number_two = random_number_calc()
-    #division_result = min(number_one, number_two)  # вычисляем первый делитель
-    #while division_result != 0:
-    #    if number_one % division_result == 0 and number_two % division_result == 0:
-    #        break
-    #    division_result -= 1  # снижаем результат на 1, чтобы проверить будет ли 0
+# number_one, number_two = random_number_calc()
+# division_result = min(number_one, number_two)  # вычисляем первый делитель
+# while division_result != 0:
+#    if number_one % division_result == 0 and number_two % division_result == 0:
+#         break
+#     division_result -= 1  # снижаем результат на 1, чтобы проверить будет ли 0
 
-    #return number_one, number_two, division_result
+# return number_one, number_two, division_result
 
 
 def main():  # вызываем только сами функции и проверяем результат
@@ -31,5 +30,4 @@ def main():  # вызываем только сами функции и пров
     question = (f'Question: {number_one} {number_two}')
     welcome_text = '''Welcome to the Brain Games COMDIV!
 Find the greatest common divisor of given numbers. Use only digits'''
-    
     return welcome_text, question, correct_answer

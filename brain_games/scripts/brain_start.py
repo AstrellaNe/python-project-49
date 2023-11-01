@@ -17,34 +17,30 @@ games = {
     '5': brain_prime.main,
 }
 
-def welcome_user():
-    # Приветствие пользователя
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    return name
 
 def game_choice(name):
     # Счетчик неверного ввода выбора игры
     non_digit_choice = 0
     chosen_game = None
-    
+
     while chosen_game is None:
-        choice = prompt.string('''Choose a game: 
+        choice = prompt.string('''Choose a game:
         Print "1" for "Even or Odd"
         Print "2" for "Calculator"
         Print "3" for "Common Divisor"
         Print "4" for "Progression"
         Print "5" for "Prime Number":''')
-        
+
         if choice.isdigit():
             if choice in games:
                 chosen_game = games.get(choice)
             else:
-                print(f'Invalid choice! Please enter a number corresponding to the available games.')
+                print(f'Invalid choice, {name}!'
+                      f'Please enter a number of the available games.')
                 non_digit_choice += 1
                 if non_digit_choice == 3:
                     print(f'''Sorry, {name}, too many mistakes ;(.
-We end the game. Let's try again next time!''')
+                          We end the game. Let's try again next time!''')
                     return
         else:
             print('Digits only!')
@@ -53,41 +49,41 @@ We end the game. Let's try again next time!''')
                 print(f'''Sorry, {name}, too many mistakes ;(.
 We end the game. Let's try again next time!''')
                 return
-    
+
     return chosen_game
 
 
+def game_cycle(chosen_game):
+    # Один цикл игры
+    answers_count = 0  # Счетчик правильных ответов
 
-
-def game_cycle(chosen_game, name):
-    # Один цикл игры   
-    answers_count = 0 # Счетчик правильных ответов
-    
     for turn in range(3):
         welcome_text, question, correct_answer = chosen_game()
         if answers_count == 0:
             print(welcome_text)
         print(question)
         user_answer = input('Your answer: ')
-        if user_answer == str(correct_answer):
+        if str.lower(user_answer) == str(correct_answer):
+            print('Correct!')
             answers_count += 1
         else:
-            print(f'{user_answer} is the wrong answer ;(. The correct answer was {correct_answer}')
+            print(f"'{user_answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.")
             break
-    
+
     return answers_count
-
-
 
 
 def main():
     print('Welcome to the Brain Games!')
-    name = welcome_user()
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
     game = game_choice(name)
     if game:
-        answers_count = game_cycle(game, name)  # передаем параметры выбранной игры
+        answers_count = game_cycle(game)  # параметры выбранной игры
         if answers_count == 3:
-            print(f'Congratulations, {name}! You answered all questions correctly.')
+            print(f'Congratulations, {name}!'
+                  f' You answered all questions correctly.')
         else:
             print(f"Let's try again, {name}!")
 

@@ -1,11 +1,20 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.1.0"
-description = ""
+version = "0.1.1"
+description = "A set of 5 math mini-games. 3 correct answers to win. Any wrong - you lose."
 authors = ["Astrella.Ne <mycuttingapp@gmail.com>"]
+repository = "https://github.com/AstrellaNe/python-project-49"
 readme = "README.md"
 packages = [
   { include = "brain_games" },
+]
+classifiers = [
+  "Topic :: Games",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Intended Audience :: Education",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Testers"
 ]
 
 [tool.poetry.dependencies]
