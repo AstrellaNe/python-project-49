@@ -52,27 +52,22 @@ We end the game. Let's try again next time!''')
     return chosen_game
 
 
-def game_cycle(chosen_game):
-    max_attempts = 3
-    answers_count = 0  # Counter for correct answers
-
-    welcome_text, _, _ = chosen_game()  # Get welcome text once
-
-    print(welcome_text)
-
-    for turn in range(max_attempts):
-        _, question, correct_answer = chosen_game()
+def game_cycle(chosen_game, name):
+    # Один цикл игры   
+    answers_count = 0 # Счетчик правильных ответов
+    
+    for turn in range(3):
+        welcome_text, question, correct_answer = chosen_game()
+        if answers_count == 0:
+            print(welcome_text)
         print(question)
         user_answer = input('Your answer: ')
-
-        if str.lower(user_answer) == str(correct_answer):
-            print('Correct!')
+        if user_answer == str(correct_answer):
             answers_count += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(. "
-                  f"Correct answer was '{correct_answer}'.")
+            print(f'{user_answer} is the wrong answer ;(. The correct answer was {correct_answer}')
             break
-
+    
     return answers_count
 
 
@@ -80,11 +75,9 @@ def main():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    chosen_game = game_choice(name)
-
-    if chosen_game:
-        answers_count = game_cycle(chosen_game)
-
+    game = game_choice(name)
+    if game:
+        answers_count = game_cycle(game, name)
         if answers_count == 3:
             print(f'Congratulations, {name}!'
                   f' You answered all questions correctly.')
