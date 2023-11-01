@@ -47,6 +47,7 @@ We end the game. Let's try again next time!''')
             return None
 
         print('Digits only!')
+    return None
 
 
 def game_cycle(chosen_game):
