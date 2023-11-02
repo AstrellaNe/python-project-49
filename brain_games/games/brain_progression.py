@@ -23,10 +23,8 @@ def random_number_calc():
 
 
 def main():
-    welcome_text = '''Welcome to the Brain Games Progression!
-What number is missing in the progression? Use only digits'''
+    welcome_text = 'What number is missing in this progression?'
     progression, correct_answer = random_number_calc()
-
     question = ' '.join(str(num) for num in progression)
 
     return welcome_text, question, correct_answer

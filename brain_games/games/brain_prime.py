@@ -17,8 +17,8 @@ def random_number_calc():
 
 
 def main():
-    welcome_text = '''Welcome to the Brain Games Progression!
-Answer "yes" if given number is prime. Otherwise answer "no"'''
+    welcome_text = ("Answer 'yes' if given number is prime."
+                    " Otherwise answer 'no'.")
     number, correct_answer = random_number_calc()
     question = number
     correct_answer = 'yes' if correct_answer else 'no'

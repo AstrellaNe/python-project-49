@@ -18,8 +18,7 @@ def random_number_calc(operation):
 
 
 def main():  # вызываем только сами функции и проверяем результат
-    welcome_text = '''Welcome to the Brain Games Calculator!
-What is the result of the expression? Use only digits'''
+    welcome_text = 'What is the result of the expression?'
     operation = choice(['+', '-', '*'])
     question, correct_answer = random_number_calc(operation)
 

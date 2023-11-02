@@ -16,9 +16,7 @@ def random_number():
 
 
 def main():  # вызываем только сами функции
-    welcome_text = ''''Welcome to the Brain Games Even or Odd!
-Answer "yes" if the number is even, otherwise answer "no".
-Use only letters, no breaks or symbols!'''
+    welcome_text = "Answer 'yes' if number even otherwise answer 'no'."
     question, correct_answer = random_number()
 
     return welcome_text, question, correct_answer

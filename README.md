@@ -69,7 +69,7 @@ Brain Games - это набор из 5 простых математически
     _Например, для запуска игры Brain Calc внутри директории brain_games используйте команду 'brain-calc'._
 
 #### Список команд:
-- `brain-games`: Запуск набора игр.
+- `brain-games`: Запуск заглавного скрипта для знакомства.
 - `brain-even`: Запуск игры "Brain Even".
 - `brain-calc`: Запуск игры "Brain Calc".
 - `brain-gcd`: Запуск игры "Brain GCD".

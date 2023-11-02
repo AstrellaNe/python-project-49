@@ -28,6 +28,6 @@ def main():  # вызываем только сами функции и пров
     number_one, number_two, divisor = random_number_calc()
     correct_answer = divisor
     question = (f'Question: {number_one} {number_two}')
-    welcome_text = '''Welcome to the Brain Games COMDIV!
-Find the greatest common divisor of given numbers. Use only digits'''
+    welcome_text = ('Find the greatest common divisor of '
+                    'given numbers.')
     return welcome_text, question, correct_answer
