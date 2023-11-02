@@ -18,5 +18,5 @@ def random_number():
     return question, answer
 
 
-def main():  # вызываем только сами функции
+def main():
     return TASK, random_number()

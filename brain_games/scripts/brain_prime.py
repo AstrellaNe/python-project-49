@@ -5,7 +5,8 @@ from brain_games.games.brain_prime import main as prime
 
 
 def main():
-    brain_engine.game_cycle(prime)
+    brain_engine.game = prime
+    brain_engine.main()
 
 
 if __name__ == '__main__':

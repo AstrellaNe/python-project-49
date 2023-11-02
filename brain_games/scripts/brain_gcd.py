@@ -5,7 +5,8 @@ from brain_games.games.brain_gcd import main as gcd
 
 
 def main():
-    brain_engine.game_cycle(gcd)
+    brain_engine.game = gcd
+    brain_engine.main()
 
 
 if __name__ == '__main__':

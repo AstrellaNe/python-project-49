@@ -5,7 +5,8 @@ from brain_games.games.brain_progression import main as prog
 
 
 def main():
-    brain_engine.game_cycle(prog)
+    brain_engine.game = prog
+    brain_engine.main()
 
 
 if __name__ == '__main__':
