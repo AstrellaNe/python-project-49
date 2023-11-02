@@ -2,19 +2,18 @@
 # модуль изолированного запуска игр
 import prompt
 
+WELCOME = 'Welcome to the Brain Games!'
+print(WELCOME)
+NAME = prompt.string('May I have your name? ')
+print(f'Hello, {NAME}!')
 
-def welcome():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
 
-
-def game_cycle(game):
+def game_cycle(game):  # добавлен аргумент NAME
     answers_count = 0
     while answers_count < 3:
-        welcome_text, question, correct_answer = game()
+        TASK, (question, correct_answer) = game()
         if answers_count == 0:
-            print(welcome_text)
+            print(TASK)
         print(question)
         user_answer = input('Your answer: ')
         if str.lower(user_answer) == str(correct_answer):
@@ -25,6 +24,6 @@ def game_cycle(game):
                   f"Correct answer was '{correct_answer}'.")
             break
     if answers_count == 3:
-        print(f'Congratulations, {name}!')
+        print(f'Congratulations, {NAME}!')
     else:
-        print(f"Let's try again, {name}!")
+        print(f"Let's try again, {NAME}!")

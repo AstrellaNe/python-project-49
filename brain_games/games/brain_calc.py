@@ -3,10 +3,14 @@
 from random import randint, choice  # модуль для выбора операции =,-или*
 
 
+TASK = 'What is the result of the expression?'
+
+
 # функция 2 рандомных чисел и верный ответ в зависимости от операции
-def random_number_calc(operation):
+def random_number_calc():
     number_one = randint(0, 10)  # ноль ставлю сознательно - так интереснее
     number_two = randint(0, 10)  # пока малые числа для легкой отладки
+    operation = choice(['+', '-', '*'])
     if operation == '+':
         calc_answer = number_one + number_two
     elif operation == '-':
@@ -18,8 +22,4 @@ def random_number_calc(operation):
 
 
 def main():  # вызываем только сами функции и проверяем результат
-    welcome_text = 'What is the result of the expression?'
-    operation = choice(['+', '-', '*'])
-    question, correct_answer = random_number_calc(operation)
-
-    return welcome_text, question, correct_answer
+    return TASK, random_number_calc()

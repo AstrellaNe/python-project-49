@@ -3,6 +3,9 @@
 from random import randint, choice  # модуль для выбора операции =,-или*
 
 
+TASK = 'What number is missing in this progression?'
+
+
 # функция прогрессии и подмены элемента на **
 def random_number_calc():
     number = randint(0, 10)  # генерируем случайное начальное число
@@ -18,13 +21,9 @@ def random_number_calc():
     # выбираем случайный элемент из прогрессии и заменяем его на **
     correct_answer = choice(progression)
     progression[progression.index(correct_answer)] = "**"
-
-    return progression, correct_answer
+    question = ' '.join(str(num) for num in progression)
+    return question, correct_answer
 
 
 def main():
-    welcome_text = 'What number is missing in this progression?'
-    progression, correct_answer = random_number_calc()
-    question = ' '.join(str(num) for num in progression)
-
-    return welcome_text, question, correct_answer
+    return TASK, random_number_calc()

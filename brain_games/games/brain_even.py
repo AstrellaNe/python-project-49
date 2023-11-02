@@ -3,6 +3,9 @@
 from random import randint
 
 
+TASK = 'Answer "yes" if number even, otherwise answer "no".'
+
+
 # выносим функцию рандомного числа из main() для читаемости
 def random_number():
     number = randint(0, 100)
@@ -16,7 +19,4 @@ def random_number():
 
 
 def main():  # вызываем только сами функции
-    welcome_text = 'Answer "yes" if number even, otherwise answer "no".'
-    question, correct_answer = random_number()
-
-    return welcome_text, question, correct_answer
+    return TASK, random_number()
