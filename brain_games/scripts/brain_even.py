@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 # модуль изолированного запуска чет-нечет
 import brain_games.scripts.brain_engine as brain_engine  # обработчик цикла
-from brain_games.games.brain_even import main as even
+from brain_games.games.brain_even import main as even 
+from brain_games.games.brain_even import TASK
 
 
 def main():
+    print(TASK)
     brain_engine.game_cycle(even)
 
 

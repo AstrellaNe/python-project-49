@@ -12,8 +12,6 @@ def game_cycle(game):  # добавлен аргумент NAME
     answers_count = 0
     while answers_count < 3:
         TASK, (question, correct_answer) = game()
-        if answers_count == 0:
-            print(TASK)
         print(question)
         user_answer = input('Your answer: ')
         if str.lower(user_answer) == str(correct_answer):
