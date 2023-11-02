@@ -3,11 +3,13 @@
 import prompt
 
 
-def game_cycle(game):
+def welcome():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    answers_count = 0
+
+
+def game_cycle(game):
     while answers_count < 3:
         welcome_text, question, correct_answer = game()
         if answers_count == 0:

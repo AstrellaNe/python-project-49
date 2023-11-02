@@ -5,6 +5,7 @@ from brain_games.games.brain_even import main as even
 
 
 def main():
+    brain_engine.welcome
     brain_engine.game_cycle(even)
 
 
