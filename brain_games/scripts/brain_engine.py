@@ -10,6 +10,7 @@ def welcome():
 
 
 def game_cycle(game):
+    answers_count = 0
     while answers_count < 3:
         welcome_text, question, correct_answer = game()
         if answers_count == 0:
