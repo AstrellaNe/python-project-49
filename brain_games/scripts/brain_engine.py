@@ -7,15 +7,15 @@ WELCOME = 'Welcome to the Brain Games!'
 TURNS = 3
 
 
-def welcome():
-    print(WELCOME)
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    return name
+#def welcome():
+#    print(WELCOME)
+#    name = prompt.string('May I have your name? ')
+#   print(f'Hello, {name}!')
+#    return name
 
 
 def game_execute(game, task):
-    name = welcome()
+    # name = welcome()
     print(task)
     answers_count = 0
     while answers_count < TURNS:
