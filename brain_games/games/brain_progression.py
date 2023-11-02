@@ -7,7 +7,7 @@ TASK = 'What number is missing in this progression?'
 
 
 # функция прогрессии и подмены элемента на **
-def random_number_calc():
+def question_and_answer():
     number = randint(0, 10)  # генерируем случайное начальное число
     step = randint(1, 5)  # случайный шаг для прогрессии
     n = randint(5, 15)  # случайное количество элементов в прогрессии
@@ -23,7 +23,3 @@ def random_number_calc():
     progression[progression.index(correct_answer)] = "**"
     question = ' '.join(str(num) for num in progression)
     return question, correct_answer
-
-
-def main():
-    return TASK, random_number_calc()

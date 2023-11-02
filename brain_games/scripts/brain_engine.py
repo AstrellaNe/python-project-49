@@ -2,46 +2,34 @@
 # модуль изолированного запуска игр
 import prompt
 
+
 WELCOME = 'Welcome to the Brain Games!'
+TURNS = 3
 
 
-def game_cycle(game):
+def welcome():
+    print(WELCOME)
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
+    return name
+
+
+def game_execute(game, task):
+    name = welcome()
+    print(task)
     answers_count = 0
-    while answers_count < 3:
-        TASK, (question, correct_answer) = game()
-        print(question)
-        user_answer = input('Your answer: ')
-        if str.lower(user_answer) == str(correct_answer):
+    while answers_count < TURNS:
+        question, correct_answer = game()
+        user_answer = prompt.string(f'Question: {question}\nYour answer: ')
+        if str(user_answer.lower()) == str(correct_answer):
             print('Correct!')
             answers_count += 1
         else:
-            print(f"'{user_answer}' is the wrong answer ;(. "
+            print(f"'{user_answer}' is wrong answer ;(."
                   f"Correct answer was '{correct_answer}'.")
-            break
-    if answers_count == 3:
-        print(f'Congratulations, {NAME}!')
-    else:
-        print(f"Let's try again, {NAME}!")
-
-
-def execute_game(game_func=None):
-    global NAME
-    if game_func:
-        TASK, _ = game_func()  # TASK из игры
-        print(TASK)
-        game_cycle(game_func)
-    else:
-        print('No game selected.')
-
-
-def main():
-    global NAME, game
-    print(WELCOME)
-    NAME = prompt.string('May I have your name? ')
-    print(f'Hello, {NAME}!')
-
-    # Зупаскаем игру
-    execute_game(game)
+            print(f"Let's try again, {name}!")
+            return
+    print(f'Congratulations, {name}!')
 
 
 if __name__ == '__main__':

@@ -6,17 +6,12 @@ from random import randint
 TASK = 'Answer "yes" if number even, otherwise answer "no".'
 
 
-# выносим функцию рандомного числа из main() для читаемости
-def random_number():
+def question_and_answer():
     number = randint(0, 100)
     if number % 2 == 0:
         answer = 'yes'
     else:
         answer = 'no'
 
-    question = f'Question: {number}'
+    question = number
     return question, answer
-
-
-def main():
-    return TASK, random_number()

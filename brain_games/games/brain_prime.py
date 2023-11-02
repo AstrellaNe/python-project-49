@@ -18,12 +18,8 @@ def is_prime(number):
     return True
 
 
-def question_make():
+def question_and_answer():
     number = randint(0, 100)  # генерируем случайное число, 0 для интереса
     question = f'Question: {number}'
     correct_answer = 'yes' if is_prime(number) else 'no'
     return question, correct_answer
-
-
-def main():
-    return TASK, question_make()
