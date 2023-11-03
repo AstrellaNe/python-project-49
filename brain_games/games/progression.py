@@ -3,7 +3,7 @@
 from random import randint, choice  # модуль для выбора операции =,-или*
 
 
-TASK = 'What number is missing in this progression?'
+TASK = 'What number is missing in the progression?'
 
 
 def task():
