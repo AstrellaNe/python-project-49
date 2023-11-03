@@ -25,5 +25,5 @@ def question_and_answer():
     # выбираем случайный элемент из прогрессии и заменяем его на **
     correct_answer = choice(progression)
     progression[progression.index(correct_answer)] = ".."
-    question = ' '.join(str(num) for num in progression)
+    question = 'Question: ' + ' '.join(str(num) for num in progression)
     return question, correct_answer

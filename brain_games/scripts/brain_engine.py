@@ -14,7 +14,7 @@ def game_execute(game):
 
     for _ in range(TURNS):
         question, correct_answer = game.question_and_answer()
-        print(str(question))
+        print(question)
         user_answer = prompt.string('Your answer: ')
 
         if str(user_answer.lower()) == str(correct_answer):
