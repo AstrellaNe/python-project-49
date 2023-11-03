@@ -6,6 +6,10 @@ from random import randint, choice  # модуль для выбора опер�
 TASK = 'What number is missing in this progression?'
 
 
+def task():
+    return TASK
+
+
 # функция прогрессии и подмены элемента на **
 def question_and_answer():
     number = randint(0, 10)  # генерируем случайное начальное число

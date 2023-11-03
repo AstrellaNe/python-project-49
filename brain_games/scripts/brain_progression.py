@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # модуль изолированного запуска прогрессии
-import brain_games.scripts.brain_engine as brain_engine
-from brain_games.games.brain_progression import question_and_answer as prog
-from brain_games.games.brain_progression import TASK as prog_TASK 
+import brain_games.scripts.brain_engine as engine
+import brain_games.games.progression as prog
+
 
 def main():
-    brain_engine.game_execute(prog, prog_TASK)
+    engine.game_execute(prog)
 
 
 if __name__ == '__main__':

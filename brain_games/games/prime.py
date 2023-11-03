@@ -2,8 +2,14 @@
 # игра прогрессия
 from random import randint  # модуль для выбора случайного
 
-TASK = ('Answer "yes" if given number is prime.'
-        ' Otherwise answer "no".')
+TASK = (
+    'Answer "yes" if given number is prime.'
+    ' Otherwise answer "no".'
+)
+
+
+def task():
+    return TASK
 
 
 # функция определения простоты числа
