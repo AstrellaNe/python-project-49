@@ -1,17 +1,25 @@
-#!/usr/bin/env python3
 # Игра Чет-нечет
 from random import randint
 
 TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def task():
-    return TASK
-
-
-def question_and_answer():
-    number = randint(0, 100)
+def check_even_odd(number):
     if number % 2 == 0:
+        return True
+    else:
+        return False
+
+
+def generate_number():
+    number = randint(0, 100)
+    answer = check_even_odd(number)
+    return number, answer
+
+
+def generate_game():
+    number, answer = generate_number()
+    if answer:
         correct_answer = 'yes'
     else:
         correct_answer = 'no'
