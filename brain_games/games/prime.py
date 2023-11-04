@@ -1,4 +1,5 @@
 # игра прогрессия
+
 from random import randint  # модуль для выбора случайного
 
 TASK = (
