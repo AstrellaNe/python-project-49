@@ -7,6 +7,7 @@ TASK = (
     ' Otherwise answer "no".'
 )
 
+
 # функция определения простоты числа
 def is_prime(number):
     if number < 2:  # проверка на 1 - по определению не простое
