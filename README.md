@@ -29,7 +29,7 @@ Brain Games - это набор из 5 простых математически
 Вводить только цифры.
 
 5. **Brain Prime**: Ответьте, является ли число простым.\
-Игра дает случайно число. Необходимо ответить yes (если четное) или no (если нечетное).\
+Игра дает случайное число. Необходимо ответить yes (если четное) или no (если нечетное).\
 Вводить только слова 'yes' или 'no'.
 
 
@@ -47,9 +47,10 @@ Brain Games - это набор из 5 простых математически
 - Python 3.6 и выше
 - Poetry (рекомендуется к установке для следования правильной логике распаковки и установки пакета игр)
 
-⚠️ _Установите Poetry, если его у вас еще нет:_\
+⚠️ _Установите Poetry, если его у вас еще нет:_
+
 <div class="alert">
-   _curl -sSL https://install.python-poetry.org | python3 -_
+   curl -sSL https://install.python-poetry.org | python3 -
 </div>
 
 
@@ -73,7 +74,7 @@ Brain Games - это набор из 5 простых математически
 
 <div class="alert">
 
-    _cd python-project-
+    cd python-project
     
 </div>
 
@@ -81,7 +82,7 @@ Brain Games - это набор из 5 простых математически
 
 <div class="alert">
 
-    _make install_
+    make install
 
 </div>
 
@@ -89,7 +90,7 @@ Brain Games - это набор из 5 простых математически
 
 <div class="alert">
 
-   _make build_
+   make build
 
 </div>
 
@@ -97,7 +98,7 @@ Brain Games - это набор из 5 простых математически
 
 <div class="alert">
 
-   _make publish_
+   make publish
 
 </div>
 
@@ -105,17 +106,17 @@ Brain Games - это набор из 5 простых математически
 
 <div class="alert">
 
-    _make package-install_
+    make package-install
 
- _(из локальной директории репозитория brain_games)_
+    (из локальной директории репозитория)
 
-_# Примечание: эта команда использует метод pip install --user файла dist/*.whl_
+    # Примечание: эта команда использует метод pip install --user файла dist/*.whl
     
-или
+    или
 
     _make package-reinstall_
 
-_# (для перестустановки с флагом --force)_
+    # (для перестустановки с флагом --force)
 
 </div>
 
