@@ -138,7 +138,7 @@ _# (для перестустановки с флагом --force)_
 ## Видео установки и геймплея доступных игр
 
 **Brain Games Installation and Operation check**
-[![asciicast](https://asciinema.org/a/ITIguCrnkFxIdJ99E9CkGI8gH.svg)](https://asciinema.org/a/ITIguCrnkFxIdJ99E9CkGI8gH)
+[![asciicast](https://asciinema.org/a/unjwrRuiq0uKyWeDmLtkAlXH7.svg)](https://asciinema.org/a/unjwrRuiq0uKyWeDmLtkAlXH7)
 
 **Presentation of Brain Even or Odd gameplay**
 [![asciicast](https://asciinema.org/a/RRiq04vt5LzNhf46gis52RokM.svg)](https://asciinema.org/a/RRiq04vt5LzNhf46gis52RokM)
@@ -154,6 +154,3 @@ _# (для перестустановки с флагом --force)_
 
 **Presentation of Brain Prime Number Module gameplay**
 [![asciicast](https://asciinema.org/a/gybjMHYq1m9zEsXveAfKBCMHV.svg)](https://asciinema.org/a/gybjMHYq1m9zEsXveAfKBCMHV)
-
-**Presentation of Brain Main Module operation**
-[![asciicast](https://asciinema.org/a/vEWonqndJBFODsPgEQn7WF1Ct.svg)](https://asciinema.org/a/vEWonqndJBFODsPgEQn7WF1Ct)
