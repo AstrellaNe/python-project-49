@@ -47,9 +47,10 @@ Brain Games - это набор из 5 простых математически
 - Python 3.6 и выше
 - Poetry (рекомендуется к установке для следования правильной логике распаковки и установки пакета игр)
 
-⚠️ _Установите Poetry, если его у вас еще нет:_
+⚠️ _Установите Poetry, если его у вас еще нет:_\
+<div class="alert">
    _curl -sSL https://install.python-poetry.org | python3 -_
-
+</div>
 
 
 
@@ -57,6 +58,7 @@ Brain Games - это набор из 5 простых математически
 1. Клонируйте репозиторий с играми:
 
 <div class="alert">
+
     # Через HTTPS
     git clone https://github.com/AstrellaNe/python-project-49.git
 
@@ -64,39 +66,61 @@ Brain Games - это набор из 5 простых математически
 
     # Через SSH
     git clone git@github.com:AstrellaNe/python-project-49.git
+
 </div>
 
 2. Перейдите в директорию с играми (из той директории, в которую клонировали репозиторий):
 
-    _cd python-project-49_
+<div class="alert">
+
+    _cd python-project-
+    
+</div>
 
 3. Установите зависимости пакета из локальной директории проекта /python-project-49:
 
+<div class="alert">
+
     _make install_
+
+</div>
 
 4. Соберите установочный пакет:
 
+<div class="alert">
+
    _make build_
+
+</div>
 
 5. Осуществите "сухую" публикацию пакета перед установкой:
 
+<div class="alert">
+
    _make publish_
+
+</div>
 
 3. Установите пакет игр:
 
-_make package-install_
+<div class="alert">
+
+    _make package-install_
 
  _(из локальной директории репозитория brain_games)_
 
-_Примечание: эта команда использует метод pip install --user файла dist/*.whl_
+_# Примечание: эта команда использует метод pip install --user файла dist/*.whl_
     
 или
 
-_make package-reinstall_
+    _make package-reinstall_
 
-_(для перестустановки с флагом --force)_
+_# (для перестустановки с флагом --force)_
+
+</div>
 
 ***
+
 ⚠️ _Примечание: Если вы установили пакет игр правильно (через 'pip install --user'), все команды должны работать с помощью команд напрямую из директории игр._
     _Например, для запуска игры Brain Calc внутри директории brain_games используйте команду 'brain-calc'._
 ***
