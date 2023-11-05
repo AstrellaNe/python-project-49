@@ -5,8 +5,8 @@ from random import randint, choice  # модуль для выбора опер�
 TASK = 'What number is missing in the progression?'
 
 
-# функция прогрессии и подмены элемента на **
-def generate_game():
+# Функция для генерации последовательности
+def generate_progression():
     number = randint(0, 10)  # генерируем случайное начальное число
     step = randint(1, 5)  # случайный шаг для прогрессии
     n = randint(5, 15)  # случайное количество элементов в прогрессии
@@ -15,10 +15,21 @@ def generate_game():
     for i in range(1, n + 1):
         result = number + (i - 1) * step
         progression.append(result)
-    # print(progression)  # выводим элементы прогрессии для отладки
+    return progression
 
-    # выбираем случайный элемент из прогрессии и заменяем его на **
-    correct_answer = choice(progression)
-    progression[progression.index(correct_answer)] = ".."
-    question = 'Question: ' + ' '.join(str(num) for num in progression)
+
+# Функция для модификации последовательности и замены одного элемента на ".."
+def modify_progression(progression):
+    # выбираем случайный элемент из прогрессии и заменяем его на ".."
+    modified_progression = progression[:]
+    correct_answer = choice(modified_progression)
+    modified_progression[modified_progression.index(correct_answer)] = ".."
+    return modified_progression, correct_answer
+
+
+# Объединеняем последовательности и правильный ответ
+def generate_game():
+    progression = generate_progression()
+    modified_progression, correct_answer = modify_progression(progression)
+    question = 'Question: ' + ' '.join(str(num) for num in modified_progression)
     return str(question), correct_answer

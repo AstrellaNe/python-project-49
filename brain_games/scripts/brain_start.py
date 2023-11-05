@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# Главный скрипт для вызова всех игр
 
 import prompt
 

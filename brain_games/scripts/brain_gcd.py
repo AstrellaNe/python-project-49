@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # модуль изолированного запуска калькулятора
-import brain_games.brain_launcher as engine
+import brain_games.game_launcher as engine
 import brain_games.games.gcd as gcd
 
 
