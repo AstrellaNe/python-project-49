@@ -5,14 +5,6 @@ from random import randint, choice  # модуль для выбора опер�
 TASK = 'What is the result of the expression?'
 
 
-# Генерация двух случайных чисел и операции над ними
-def generate_calc_elements():
-    number_one = randint(0, 10)
-    number_two = randint(0, 10)
-    operation = choice(['+', '-', '*'])
-    return number_one, number_two, operation
-
-
 # Вычисление правильного ответа
 def calculate_answer(number_one, number_two, operation):
     if operation == '+':
@@ -24,7 +16,9 @@ def calculate_answer(number_one, number_two, operation):
 
 
 def generate_game():
-    number_one, number_two, operation = generate_calc_elements()
+    number_one = randint(0, 10)
+    number_two = randint(0, 10)
+    operation = choice(['+', '-', '*'])
     correct_answer = calculate_answer(number_one, number_two, operation)
     question = f'Question: {number_one} {operation} {number_two}'
     return str(question), correct_answer

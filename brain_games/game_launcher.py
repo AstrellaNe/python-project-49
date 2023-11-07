@@ -1,13 +1,13 @@
-#!/usr/bin/env python3
 # модуль изолированного запуска игр
 import prompt
+import brain_games.cli as cli  # ввод и возврат имени
 
 TURNS = 3
 
 
 def game_execute(game):
     print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
+    name = cli.welcome_user()
     print(f'Hello, {name}!')
     print(game.TASK)
 

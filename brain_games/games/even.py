@@ -11,14 +11,9 @@ def check_even_odd(number):
         return False
 
 
-def generate_number():
+def generate_game():
     number = randint(0, 100)
     answer = check_even_odd(number)
-    return number, answer
-
-
-def generate_game():
-    number, answer = generate_number()
     if answer:
         correct_answer = 'yes'
     else:

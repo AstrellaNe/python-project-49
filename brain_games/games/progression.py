@@ -18,18 +18,12 @@ def generate_progression():
     return progression
 
 
-# Функция для модификации последовательности и замены одного элемента на ".."
-def modify_progression(progression):
+# Объединеняем последовательности и правильный ответ
+def generate_game():
+    progression = generate_progression()
     # выбираем случайный элемент из прогрессии и заменяем его на ".."
     modified_progression = progression[:]
     correct_answer = choice(modified_progression)
     modified_progression[modified_progression.index(correct_answer)] = ".."
-    return modified_progression, correct_answer
-
-
-# Объединеняем последовательности и правильный ответ
-def generate_game():
-    progression = generate_progression()
-    modified_progression, correct_answer = modify_progression(progression)
     question = 'Question: ' + ' '.join(str(num) for num in modified_progression)
     return str(question), correct_answer
