@@ -1,6 +1,5 @@
 # модуль изолированного запуска игр
 import prompt
-import brain_games.cli as cli  # ввод и возврат имени
 
 TURNS = 3
 
