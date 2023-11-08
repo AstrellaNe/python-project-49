@@ -22,7 +22,7 @@ def generate_progression():
 def generate_game():
     progression = generate_progression()
     # выбираем случайный элемент из прогрессии и заменяем его на ".."
-    modified_progression = progression[:]
+    modified_progression = progression[:]  # копия для замены на ..
     correct_answer = choice(modified_progression)
     modified_progression[modified_progression.index(correct_answer)] = ".."
     question = 'Question: ' + ' '.join(str(num) for num in modified_progression)

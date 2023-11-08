@@ -5,10 +5,7 @@ TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def check_even_odd(number):
-    if number % 2 == 0:
-        return True
-    else:
-        return False
+    return number % 2 == 0
 
 
 def generate_game():
